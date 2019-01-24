@@ -6,10 +6,10 @@ class Placement < ApplicationRecord
   # .group('placements.start, placements.end, placements.cpm, placements.name') }
 
   scope :sum_of_impression, -> {
-                              joins(:deliveries).select('sum(deliveries.impressions) as impression, placements.id, placements.start, placements.end, placements.cpm, placements.name')
-                                                .group('placements.start, placements.end, placements.cpm, placements.name, placements.id')
+                              joins(:deliveries).select('sum(deliveries.impressions) as impression, placements.id, placements.start, placements.end_date, placements.cpm, placements.name')
+                                                .group('placements.start, placements.end_date, placements.cpm, placements.name, placements.id')
                                                 .order('placements.id')
-                                                .pluck(:name, :cpm, :start, :end, Arel.sql('sum(deliveries.impressions)'))
+                                                .pluck(:name, :cpm, :start, :end_date, Arel.sql('sum(deliveries.impressions)'))
                             }
 
   def self.search(start_date, end_date)

@@ -22,7 +22,7 @@ namespace :speedy do
         next
      end
       # print row[0], row[1], row[2].class, row[3]
-      placement = Placement.new(id: row[0], name: row[1], start: Date.strptime(row[2], '%m/%d/%y'), end: Date.strptime(row[3], '%m/%d/%y'), cpm: row[4])
+      placement = Placement.new(id: row[0], name: row[1], start: Date.strptime(row[2], '%m/%d/%y'), end_date: Date.strptime(row[3], '%m/%d/%y'), cpm: row[4])
       placement.save!
     end
   end
