@@ -1,12 +1,19 @@
 
-
+<center> 
+  <div class='container'>
 <% @placements.each do |placement| %> 
 
-  <tr>
+  
         <td><%= placement[0]  %> </td>
-        <td><%= placement[2] %> </td>
-        <td><%= placement[3] %> </td>
-</tr>
+        (<td><%= placement[2].strftime("%m/%d/%Y") %> </td>-
+        <td><%= placement[3].strftime("%m/%d/%Y") %> </td>): 
+        <td><%= number_with_delimiter(placement[4], :delimiter => ',')  %> </td> impresssions @ 
+        $<td><%= placement[1]  %> </td> =
+        $<td><%= number_with_delimiter((placement[4]/1000.0 * placement[1]).round, :delimiter => ',' )%> </td><br />
+
 
 
 <%end%>
+
+</div>
+</center>

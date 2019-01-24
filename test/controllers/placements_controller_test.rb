@@ -5,5 +5,4 @@ class PlacementsControllerTest < ActionDispatch::IntegrationTest
     get placements_index_url
     assert_response :success
   end
-
 end
