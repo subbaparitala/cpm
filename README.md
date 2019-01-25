@@ -49,7 +49,7 @@
  Step 5.
    go to localhost:3000 #here the report is present. click on range to select the dates and the get the total 
    
-   To rub the test cases 
+   To run the test cases 
    
   ` $ rspec spec `
 
