@@ -3,6 +3,7 @@
 # My apporach to the problem 
   
 * Initally I created two Models 
+   
    1.Placement with attributes id, name, start, end, cpm
    2. Delivery with attritubes placement_id, date, impressions
    
