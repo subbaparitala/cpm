@@ -6,7 +6,7 @@
    
    1.Placement with attributes id, name, start, end, cpm
    
-   2. Delivery with attritubes placement_id, date, impressions
+   2.Delivery with attritubes placement_id, date, impressions
    
  * I started with importing the CSV files to the database with respective models. To do this I created a rake task which will do the          import   of csv files. I took precautions to not insert null values by adding the conditions in database.
   
